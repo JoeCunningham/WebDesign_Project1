@@ -1,0 +1,235 @@
+/* flags.CSS */
+/* CSS file linked to flags-CSS.html */
+/* Joe Cunningham */
+
+
+
+/* Set background colour of the (behind the container) to the grey-ish colour */
+body {
+    background-color: #C7C1C1; 
+}
+
+/* Aligns the "Flags" header correctly with in the centre on the left */
+h1 {
+    padding-top: 25px;
+    padding-left: 20px;
+}
+
+/* Sets text colour and font-family for the headings */
+h1, h2, h3 {
+    color: #8E8787;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", sans-serif;
+}
+
+/* Puts the 12x12px grey squares next to the h2 tags as shown in the screenshot */
+h2 {
+    padding-left: 18px;
+    
+    /* The line below is cited from Stack Overflow */
+    /* It is more efficient than typing out background-image, background-repeat, background-position, etc. separately */
+    /* It accomplishes the same thing but in one line of code */
+    /* http://stackoverflow.com/questions/22186018/how-to-put-a-bullet-beside-the-heading-elements-as-background-image */
+    background: url(https://internal.cs.ncl.ac.uk/modules/2016-17/csc1026/flags/css/12-dkgrey.png) 0 center no-repeat;
+    
+}
+
+/* Puts the smaller 8x8px grey squares next to the h3 tags as shown in the screenshot*/
+h3 {
+    padding-left: 12px;
+
+    /* The line below was cited just as the previous one */
+    background: url(https://internal.cs.ncl.ac.uk/modules/2016-17/csc1026/flags/css/8-dkgrey.png) 0 center no-repeat;
+}
+
+/* The container is the main div containing all the content on the page */
+/* Sets the maximum and minumum widths (so that it is flexible if the page's width is reduced */
+/* Sets the background colour to white, margin:auto centres the container in the middle of the page */
+/* And sets 10px of padding, so there is a gap between the edge of the container and the text */
+#container {
+    min-width: 450px;
+    max-width: 960px;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 10px;
+}
+
+/* Sets the height of the header div (containing the flags image and the h1) */
+#header {
+    height: 70px;
+}
+
+/* Sets the background image of the div to be the flags image */
+/* So the image appears as part of the header (but not written in HTML markup) */
+/* Sets the dimensions of the image and adjusts margin/padding to align it correctly */
+/* Float:right so that the image is on the right hand side as shown in the screenshot*/
+#header-img {
+    background: url(https://internal.cs.ncl.ac.uk/modules/2016-17/csc1026/flags/css/70-flags.png) no-repeat;
+    width: 200px;
+    height: 70px;
+    float: right;
+    margin: 10px;
+    margin-right: 0;
+    padding: 0;
+}
+
+/* Sets font-family for all <p> tags on the page */
+p{
+    font-family: "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+/* Nav-bar is the div containing the unordered list with links to parts of the page */
+/* Sets font family, background colour */
+/* Overflow:hidden fixes an issue with the background colour  */
+/* "Position:absolute" and "top:0px" move the nav-bar from below the <h1> tag to the top of the page */
+/* Negative margin-left and margin-right allow the div to extend all the way to the edge of the container (ignoring the padding on the container) */
+/* Width:100% so that the nav bar extends across the div, max and min widths limit the size */
+#nav-bar {
+    font-family: "Palatino Linotype", Palatino, Georgia, serif;
+    background-color: #5C2C2D;
+    overflow: hidden;
+    margin-left: -10px;
+    margin-right: -10px;
+    top: 0px; 
+    position: absolute; 
+    width: 100%;
+    max-width: 960px;
+    min-width: 450px;
+    padding-right: 20px; 
+    margin-top: 8px; 
+}
+
+/* Removes the underline on the links and changes the text colour*/
+#nav-bar a {
+    text-decoration: none;
+    color: #B9AEAE;
+}
+
+/* Underlines links when hovered over */
+#nav-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Removes bullet points from list and floats on the right hand side of the page*/
+#nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+/* Keeps the list in the correct order when floating right, and adds padding between links*/
+#nav-bar li {
+    float: left; 
+    padding: 8px;
+}
+
+/* Aligns the image within the box */
+#flickr-img {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+/* Floats on the right hand side of page, sets background image and min width and height */
+/* Negative margin-top moves the div upwards */
+#flickr-container {
+    float: right;
+    background-image: url(https://internal.cs.ncl.ac.uk/modules/2016-17/csc1026/flags/css/420x370-box.png);
+    background-repeat: no-repeat;
+    min-width: 420px;
+    min-height: 370px;
+    margin: 10px;
+    margin-top: -20px;
+}
+
+/* This class refers to all the dark red dividers between the sections of the page */
+/* Sets colour, height etc, and negative margins allow it to ignore padding on the main container */
+/* "width:inherit" allows it to inherit the width of the container */
+.divider {
+    width: inherit;
+    background-color: #5C2C2D;
+    height: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+/* Exactly the same as above, but only 8px in height */
+/* Because the screenshot shows some dividers are smaller than others */
+.divider-thin {
+    width: inherit;
+    background-color: #5C2C2D;
+    height: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+/* Hides everything with the class hidden (<hr /> tags and unused items in the list) */
+.hidden {
+    display: none;
+}
+
+/* Adds a small border around the letter flag images */
+#letter-images img {
+    border: 1px solid black;
+}
+
+/* Sets the box as the background for the youtube video, and floats the div right */
+/* Margins are to adjust the position of the page */
+#video-container {
+    float: right;
+    background: url(https://internal.cs.ncl.ac.uk/modules/2016-17/csc1026/flags/css/460x320-box.png) no-repeat;
+    min-width: 460px;
+    min-height: 320px;
+    margin: 5px;
+    margin-top: -20px;
+    margin-left: 30px;
+}
+
+/* Sets dimensions for video, and aligns the video with the box */
+#video {
+    width: 420px;
+    height: 240px;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+/* Aligns the text in the centre and reduces size (and removes margin between the text and the video) */
+#video-container p {
+    text-align: center;
+    margin: 0;
+    font-size: small;
+}
+
+/* This class refers to all the <p> tags around the flag images (letters and numbers) */
+/* Inline:block puts all the images in a flexible grid as described in the specification */
+/* Small-caps and bold as shown in the screenshot */
+.image {
+    display: inline-block;
+    margin: 10px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+/* Adds the flags image and floats on the right hand side */
+#three-flags-image {
+    background: url(https://internal.cs.ncl.ac.uk/modules/2016-17/csc1026/flags/css/3-flags75.png) 0 center no-repeat;
+    width: 415px;
+    height: 200px;
+    float: right;
+    margin-top: -20px;
+}
+
+/* Sets the height of the footer div */
+#footer {
+    height: 30px;
+}
+
+/* Correctly aligns the text in the footer, and reduces text size */
+#footer p {
+    float: right;
+    margin: auto;
+    font-size: small;
+}
